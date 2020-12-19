@@ -6,6 +6,8 @@ using namespace std;
 void solve() {
 	int n;
 	cin >> n;
+	
+	//find the number of positive and negative numbers
 	int pos=0, neg=0;
 	for(int i=0; i<n; ++i) {
 		int a;
@@ -15,6 +17,9 @@ void solve() {
 		else
 			neg++;
 	}
+	
+	//check if one of them is zero and if it's true then print out the 'n' itself
+	// if not then print choose the maximum and minimum between them
 	if((pos>0&&neg==0)||(pos==0&&neg>0))
 		cout << n << " " << n;
 	else
